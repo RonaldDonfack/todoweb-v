@@ -195,7 +195,7 @@ textarea {
 .popup {
 
     max-width: 500px;
-    width: 60vw;
+    width: 80vw;
     overflow: auto;
     display: flex;
     font-family: "Roboto", sans-serif;
@@ -268,7 +268,9 @@ textarea {
     .taskchecker {
         padding: 0;
     }
-
+.main{
+    padding: 20px;
+}
     .task {
         flex-wrap: wrap;
         gap: 20px
