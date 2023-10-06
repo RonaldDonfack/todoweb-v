@@ -1,0 +1,276 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    gap: 30px;
+    z-index: 0;
+}
+
+.mainBlur {
+    filter: blur(2px);
+    pointer-events: none;
+    user-select: none;
+}
+
+label {
+    display: block;
+}
+
+.todoform,
+.todolist {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.todoform p,
+.todos {
+    font-size: 30px;
+    /* tamanho do texto */
+    margin-bottom: 30px;
+}
+
+form,
+.taskchecker {
+    background-color: #f5f3f3a9;
+    padding: 40px;
+}
+
+form button {
+    width: 100%;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 17px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #007FFF;
+    border-color: #007FFF;
+}
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+input {
+    border-color: #FFFFFF;
+    height: 50px;
+}
+
+input,
+textarea {
+
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+    padding: 10px;
+    /* border-color: #00FFFF; */
+}
+
+.inputRequired {
+    display: none;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #EF4444;
+}
+
+.tasktitle {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.taskchecker {
+    max-height: 900px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.uniquetask {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.taskactions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.taskchecker button {
+    border-radius: 8px;
+    padding: 5px;
+    border-color: #FFFFFF;
+}
+
+.taskstatus {
+    color: #EF4444;
+    background-color: #FECACA;
+
+    width: 30%;
+    min-width: 100px;
+    height: 35px;
+}
+
+.taskstatus-complete {
+    color: #22C55E;
+    background-color: #BBF7D0;
+    width: 30%;
+    min-width: 100px;
+    height: 35
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nextstatus {
+    background-color: #c084fc;
+}
+
+
+.edit {
+    font-size: 30px;
+    color: #007FFF;
+    object-fit: cover;
+}
+
+.trash {
+    font-size: 30px;
+    color: red;
+}
+
+.overview {
+    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+}
+
+.popcontainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* top: 50vh; */
+    top :0;
+    z-index: 999;
+    background-color: #12010178;
+ 
+}
+
+.popup {
+
+    max-width: 500px;
+    width: 60vw;
+    overflow: auto;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    justify-content: space-around;
+    background-color: #ededed;
+    border-radius: 15px;
+    padding: 2%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+.popcontent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    align-self: flex-end;
+    gap: 9px;
+
+}
+
+.cancelbtn,
+.deletebtn {
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: unset;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.deletebtn {
+    background-color: rgb(242, 126, 126);
+    color: #FFFFFF;
+
+}
+
+.alert {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: #e1b8b8;
+    font-size: 40px;
+    color: #e61f1f;
+    border-radius: 50%;
+}
+
+@media(width < 1024px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todoform,
+    .todolist {
+        width: 100%;
+    }
+}
+
+@media (width < 500px) {
+    .taskchecker {
+        padding: 0;
+    }
+
+    .task {
+        flex-wrap: wrap;
+        gap: 20px
+    }
+}
